@@ -2,10 +2,10 @@ import { DynamicStyleSheet } from "../../../styles/Dynamic.StyleSheet";
 
 export const styles = DynamicStyleSheet.create((props) => ({
   container: {
-    marginTop: 64,
-    marginHorizontal: 32,
+    marginVertical: 20,
+    marginHorizontal: 16,
     padding: 16,
-    borderRadius: 8,
+    borderRadius: 10,
     backgroundColor: props.backgroundColors.primary100,
     // elevation: 2,
     // shadowColor: 'black',

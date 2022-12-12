@@ -15,5 +15,7 @@ export const styles = DynamicStyleSheet.create((props) => ({
   },
   buttons: {
     marginTop: 8,
+    marginHorizontal: 16,
+    borderRadius: 12
   },
 }))

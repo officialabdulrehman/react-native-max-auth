@@ -13,6 +13,6 @@ export const styles = DynamicStyleSheet.create((props) => ({
   pressed: {
     opacity: 0.75,
     borderRadius: 6,
-    backgroundColor: props.backgroundColors.primary000,
+    backgroundColor: props.backgroundColors.primary100,
   },
 }))
