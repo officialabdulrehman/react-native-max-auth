@@ -4,11 +4,13 @@ import { AuthResponse } from "../../../../services/api/auth/Auth.api.model"
 type State = {
   token: string
   tokenData?: AuthResponse
+  isAuthenticated: boolean
 }
 
 const initialState: State = {
   token: "",
   tokenData: undefined,
+  isAuthenticated: false
 }
 
 export const authSlice = createSlice({
@@ -18,10 +20,12 @@ export const authSlice = createSlice({
     authenticate: (state, { payload }: PayloadAction<AuthResponse>) => {
       state.token = payload.idToken
       state.tokenData = payload
+      state.isAuthenticated = true
     },
     logout: (state, action: PayloadAction<void>) => {
       state.token = ""
       state.tokenData = undefined
+      state.isAuthenticated = false
     }
   }
 })

@@ -1,6 +1,6 @@
 import { DynamicStyleSheet } from "../../styles/Dynamic.StyleSheet";
 
-export const styles = DynamicStyleSheet.create({
+export const styles = DynamicStyleSheet.create((props) => ({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -11,5 +11,6 @@ export const styles = DynamicStyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 8,
+    color: props.colors.primary400
   }
-})
+}))

@@ -10,7 +10,7 @@ class AuthApi {
   }
 
   public async login(data: LoginParams): Promise<AuthResponse> {
-    const { data: result } = await api.post(`${AUTH_URL}:signIn?key=${FIREBASE_WEB_API_KEY}`, data, {})
+    const { data: result } = await api.post(`${AUTH_URL}:signInWithPassword?key=${FIREBASE_WEB_API_KEY}`, data, {})
     return result
   }
 
