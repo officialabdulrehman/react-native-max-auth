@@ -19,8 +19,8 @@ export const LoginScreen = (props: Props) => {
       dispatch(authenticate(result));
     } catch (e) {
       Alert.alert("Login failed", "Invalid credentials");
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   if (loading) {

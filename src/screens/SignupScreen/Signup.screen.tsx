@@ -20,8 +20,8 @@ export const SignupScreen = (props: Props) => {
       dispatch(authenticate(result));
     } catch (e) {
       Alert.alert("Signup failed", "Invalid data");
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   if (loading) {
