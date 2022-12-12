@@ -1,1 +1,1 @@
-# react-native-max-auth
+# react-vative-max-expense-tracker
