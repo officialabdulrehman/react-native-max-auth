@@ -5,12 +5,12 @@ import { LoginParams, SignupParams } from "./Auth.api.model"
 class AuthApi {
 
   public async signup(data: SignupParams) {
-    const { data: result } = await api.post(`${AUTH_URL}?key=${FIREBASE_WEB_API_KEY}`, { ...data, returnSecureToken: true }, {})
+    const { data: result } = await api.post(`${AUTH_URL}:signUp?key=${FIREBASE_WEB_API_KEY}`, { ...data, returnSecureToken: true }, {})
     return result
   }
 
   public async login(data: LoginParams) {
-    const { data: result } = await api.post(`${AUTH_URL}?key=${FIREBASE_WEB_API_KEY}`, data, {})
+    const { data: result } = await api.post(`${AUTH_URL}:signIn?key=${FIREBASE_WEB_API_KEY}`, data, {})
     return result
   }
 
